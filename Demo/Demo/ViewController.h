@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "UICollectionViewWaterfallLayout.h"
 
-@interface ViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegateWaterfallLayout>
-@property (nonatomic, strong) UICollectionView *collectionView;
+@interface ViewController : UIViewController <PSUICollectionViewDataSource, UICollectionViewDelegateWaterfallLayout>
+@property (nonatomic, strong) PSUICollectionView *collectionView;
 @end

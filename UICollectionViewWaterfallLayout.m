@@ -96,8 +96,8 @@
         CGFloat yOffset = [(_columnHeights[columnIndex]) floatValue];
         CGPoint itemCenter = CGPointMake(floorf(xOffset + _itemWidth/2), floorf((yOffset + itemHeight/2)));
 
-        UICollectionViewLayoutAttributes *attributes =
-        [UICollectionViewLayoutAttributes layoutAttributesForCellWithIndexPath:indexPath];
+        PSUICollectionViewLayoutAttributes *attributes =
+        [PSUICollectionViewLayoutAttributes layoutAttributesForCellWithIndexPath:indexPath];
         attributes.size = CGSizeMake(self.itemWidth, itemHeight);
         attributes.center = itemCenter;
         [_itemAttributes addObject:attributes];

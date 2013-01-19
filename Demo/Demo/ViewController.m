@@ -20,7 +20,7 @@
 @implementation ViewController
 
 #pragma mark - Accessors
-- (UICollectionView *)collectionView
+- (PSUICollectionView *)collectionView
 {
     if (!_collectionView) {
         UICollectionViewWaterfallLayout *layout = [[UICollectionViewWaterfallLayout alloc] init];
@@ -29,7 +29,7 @@
         layout.sectionInset = UIEdgeInsetsMake(9, 9, 9, 9);
         layout.delegate = self;
 
-        _collectionView = [[UICollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:layout];
+        _collectionView = [[PSUICollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:layout];
         _collectionView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
         _collectionView.dataSource = self;
         _collectionView.delegate = self;
@@ -80,17 +80,17 @@
 }
 
 #pragma mark - UICollectionViewDataSource
-- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
+- (NSInteger)collectionView:(PSUICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
     return CELL_COUNT;
 }
 
-- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
+- (NSInteger)numberOfSectionsInCollectionView:(PSUICollectionView *)collectionView
 {
     return 1;
 }
 
-- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView
+- (PSUICollectionViewCell *)collectionView:(PSUICollectionView *)collectionView
                   cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     UICollectionViewWaterfallCell *cell =
@@ -102,7 +102,7 @@
 }
 
 #pragma mark - UICollectionViewWaterfallLayoutDelegate
-- (CGFloat)collectionView:(UICollectionView *)collectionView
+- (CGFloat)collectionView:(PSUICollectionView *)collectionView
                    layout:(UICollectionViewWaterfallLayout *)collectionViewLayout
  heightForItemAtIndexPath:(NSIndexPath *)indexPath
 {

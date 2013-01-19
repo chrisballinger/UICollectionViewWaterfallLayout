@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UICollectionViewWaterfallCell : UICollectionViewCell
+@interface UICollectionViewWaterfallCell : PSUICollectionViewCell
 @property (nonatomic, copy) NSString *displayString;
 @end
